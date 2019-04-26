@@ -1,13 +1,13 @@
 using System;
 
-public class Message
+public class User
 {
-    public string Name { get; set; }
-    public string Title { get; set; }
+    public string Name {get; set;}
+    public string Email {get; set;}
 }
 
-public static Message Run(TimerInfo myTimer, ILogger log)
+public static void Run(TimerInfo myTimer, ICollector<User> outputQueueItem, ILogger log)
 {
     log.LogInformation($"C# Timer trigger function executed at: {DateTime.Now}");
-    return new Message { Name = "Test", Title = "TestTitle" };
+    outputQueueItem.Add(new User{Name = "TimerUser", Email = "timer@timer.com"});
 }

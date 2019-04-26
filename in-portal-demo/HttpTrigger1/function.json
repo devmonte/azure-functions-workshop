@@ -1,7 +1,7 @@
 {
   "bindings": [
     {
-      "authLevel": "anonymous",
+      "authLevel": "function",
       "name": "req",
       "type": "httpTrigger",
       "direction": "in",
@@ -17,8 +17,8 @@
     },
     {
       "type": "queue",
-      "name": "outputQueueItems",
-      "queueName": "testqueue",
+      "name": "outputQueueItem",
+      "queueName": "outqueue",
       "connection": "AzureWebJobsStorage",
       "direction": "out"
     }

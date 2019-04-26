@@ -4,12 +4,12 @@
       "name": "myTimer",
       "type": "timerTrigger",
       "direction": "in",
-      "schedule": "*/20 * * * * *"
+      "schedule": "*/30 * * * * *"
     },
     {
       "type": "queue",
-      "name": "$return",
-      "queueName": "testqueue",
+      "name": "outputQueueItem",
+      "queueName": "outqueue",
       "connection": "AzureWebJobsStorage",
       "direction": "out"
     }

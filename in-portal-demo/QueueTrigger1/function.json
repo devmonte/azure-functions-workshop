@@ -4,12 +4,12 @@
       "name": "myQueueItem",
       "type": "queueTrigger",
       "direction": "in",
-      "queueName": "testqueue",
+      "queueName": "outqueue",
       "connection": "AzureWebJobsStorage"
     },
     {
       "type": "table",
-      "name": "messages",
+      "name": "outputTable",
       "tableName": "outTable",
       "connection": "AzureWebJobsStorage",
       "direction": "out"
